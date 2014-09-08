@@ -62,7 +62,7 @@ class Http {
 			throw new InvalidResponseException('Result from Istribute is not valid JSON');
 		}
 		if (is_object($data)) {
-			if ($data->error) {
+			if (isset($data->error) && $data->error) {
 				throw new IstributeErrorException('Error from Istribute: ' . $data->error, 500, $data);
 			}
 		}

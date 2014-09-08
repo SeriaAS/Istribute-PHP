@@ -9,4 +9,4 @@ function istribute_autoloader($class) {
 	}
 }
 
-spl_autoload_register(istribute_autoloader);
+spl_autoload_register('istribute_autoloader');
